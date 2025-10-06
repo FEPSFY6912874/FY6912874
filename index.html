@@ -139,6 +139,61 @@
 <p>
 <pre>
   Angluin , D 91998) , Quartles and concepts of learmimg , Machine learning 2 , (4) , 319-342
+  All harvard here 
 </pre>
 </p>
+
+</hr>
+  <!Adding Last Update>
+  <div id = "last-update">Loading last update time ... </div>
+  <button onclick="verifyLastUpdateTime()" style = "display : block; margin:10px auto ; padding 8px 16 px ; ">
+    Verify Last Modified Time
+  </button>
+
+  <script>
+    async function getLastUpdatedTime() {
+      const username = ' FEPSFY6912874 ' ;
+      const repo = ' FY6912874 ';
+
+      const url = 'https://api.github.com/repos/$FY6912874/$FY6912874/commits' ;
+      try {
+        const response = await fetch(url, {
+          method: 'GET',
+          headers: {
+            'Accept' : @application/vnd.github.v3.json',
+          }
+        });
+        if (!response.ok) {
+          throw new Error('Error fetching data: ${response.status} - ${response.statusText' );
+        }
+        const commits = await response.json();
+        if (commits &&commits.length > 0) {
+          const lastCommitDate = new Date(commits[0].commit.commiter.date;
+
+          document.getElementById('last-updated').innerText = 'Last Modified Time: ${lastCommitDate.toLoacaleString()}';
+        } else {
+          document.getElementById('last-updated').innerText = 'No commits found in repository.';
+        }
+      } catch (error) {
+        console.error('Error fetching the last updated time ' , error);
+        document.getElementById('last-updated').innerText = ' Error fetching update time. Please check the repository details. ';
+
+      }
+    }
+
+    //Function to verify the last update time by re-fetching it form the API 
+    async function verifyLastUpdatedTime() {
+      document.getElementById('last-update').innerText = 'Verifying .. ';
+      await getLastUpdateTime();
+      alert("Last modified time has been sucessfully verified from GitHub API.");
+    }
+
+    // Intial load to display the time on page load
+    window.onload = getLastUpdatedTime;
+  
+  </script>
+</body>
+
+  
+  </script>
 
