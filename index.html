@@ -67,15 +67,14 @@
 
   <p class="ex1">
   <pre>
-    This paper presents a novel adaptive active learning stategy. THe most accurate clarrification model from .......
+    Abstract here 
   </pre>
   
 </p>
   <h3 id="Intro">Abstract</h3>
   <p Class="ex1">
   <pre>
-    Active Learning (Angluin, 1988, Cohn et al., 1994) is a paradigm where a concept is learnt by an
-    intelligent machine through the interaction of an oracle with the machine system.
+    intro here
   </pre>
 
 </p>
@@ -87,39 +86,38 @@
     
   </style>
 <pre>
-  <td><a href="https://www.icevirtuallibrary.com/doi/full/10.1680/jbren.21.00034">Toshihiko et al (2023)</a> </td>
-  Table 1 : Data on cost and lifespan of bridge repairs 
+  Table 1 : Table name here 
 </pre>
 <table>
 <tr>
-  <th>£ Cost of the repairs</th>
-  <th> Lifespan of the repairs (years)</th>
+  <th> speed </th>
+  <th> air flow </th>
   
 </tr>
 
 <tr>
-  <td>0.7 m </td>
-  <td> 2 </td>
+  <td>- </td>
+  <td> 2- </td>
 </tr>
 
 <tr>
-  <td> 3.3 m</td>
-  <td> 4</td>
+  <td> -</td>
+  <td> -</td>
 </tr>
 
 <tr>
-  <td> 2.6 m </td>
-  <td> 5</td>
+  <td> - </td>
+  <td> - </td>
 </tr>
 
 <tr>
-  <td> 17.4 m </td>
-  <td>7</td>
+  <td> - </td>
+  <td>-</td>
 </tr>
 
 <tr>
-  <td> 8.8 m </td>
-  <td> 9</td>
+  <td> - </td>
+  <td> -</td>
 </tr>
 </table>
 
@@ -137,15 +135,17 @@
     <!-- Last commit time display -->
 <div id="last-updated">Loading last update time...</div>
 <!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 5px 12px;">
     Verify Last Modified Time
 </button>
+
+
 <script>
     async function getLastUpdatedTime() {
-        const username = 'nr0025';
-        const repo = 'FY0025';
-       
+        const username = "FEPSFY6912874";
+        const repo = "FY6912874";
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
+      
         try {
             const response = await fetch(url, {
                 method: 'GET',
@@ -153,14 +153,13 @@
                     'Accept': 'application/vnd.github.v3+json',
                 }
             });
+          
             if (!response.ok) {
                 throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
             }
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
-               
-                // Displaying the time on load
                 document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
                 document.getElementById('last-updated').innerText = 'No commits found in the repository.';
