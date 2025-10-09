@@ -31,112 +31,101 @@
       margin-left:200 px;
     }
   </style>
+
   </head>
-  
-</html>
-</head>
-<meta name = "viewport" content = "width=device-width , intial-scale=1">
-<link rel="stylesheet" href = " https:www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
-
+ 
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <style>
-body{
-  background:radial-gradient(circle , #ADD8E6, #008080) ;
-  background-size : cover;
-} 
+  .mySlides {display:none;}
+  </style>
 
-  <!table of contents>
-<table>
-<tr>
-  <th><h3> Table Of Contence </h3></th>
-</tr>
-<tr>
-  <td><a href="#Abstract">Abstract</td>
-</tr>
-<tr>
-  <td><a href="#Indroduction">Introduction</td>
-</tr>
-<tr>
-  <td><a href="#Analysis and discussion">Analysis and discussion</td>
-</tr>
-<tr>
-  <td><a href="#References">Referneces</td>
-</tr>
-</table>
+  <body style="background-color:#b08ebd;margin-left:50px">
 
-<hr>
-<h3 id="Abstract">Abstract</h3>
+
+    <!table of contents>
+  <table>
+
+    <tr>
+      <th><h3>Table of Contents</h3></th>
+    </tr>
+    <tr>
+      <td><a href="#Abstract"> Abstract</td>
+    </tr>
+    <tr>
+      <td><a href="#Introduction">Introduction</td>
+    </tr>
+    <tr>
+      <td><A href="#Analysis and Discussion">Analysis and Discussion</td>
+    </tr>
+
+    <tr>
+      <td><a href="#References">References</td>
+    </tr>
+  </table>
+
+  <hr>
+  <h3 id="Abstract">Abstract</h3>
+
   <p class="ex1">
-  <pre>
-    Abstract goes here 
-  </pre>
-</p>
+    <pre>
+      This is where the abstact is going to go once you have written it and it has been draft and the word cou t is all correct
+    </pre>
+  </p>
 
-<h3 id= "Introduction ">Introduction </h3>
-<p class="ex1">
-  <pre id="IndroductionCount>
-    introduction goes here 
-  </pre>
-</p>
+ 
+  <h3 id="Introduction">Introduction</h3>
 
-    
+  <p class="ex1">
+    <pre id="IntroductionCount">
+      Earthquakes don’t kill people, buildings do. Earthquakes are uncontrollable and still difficult to predict with devastating
+      consequences for all that live there how can we ensure safety without giving warning. The retrofitting of buildings is crucial
+      for older and poorly built buildings to withstand the power of an earthquake. In the 2023 Turkey and Syria Earthquake it was
+      reported that over 55,000 people died, why? Building regulations laxed in the name of development leading to 50% of buildings
+      not being up to basic building codes. Earthquake-resistant design has come along way in a matter of years by first looking at
+      what causes buildings to collapse. Retrofitting is the next step with it appearing to be the most cost-effective way to ensure
+      peoples safety.
+    </pre>
+  </p>
 
-<h3 id = "Analysis and discussion">Analysis and discussion</h3>
-<p class="ex1">
-  <pre id="AnalysisCount">
-    The analysis and discussion will be written in here once drafted and adhering to the word count
-  </pre>
-</p>    
 
-<pre>
-  Table 1 : Table name here 
-</pre>
-<table>
-<tr>
-  <th> speed </th>
-  <th> air flow </th>
-  
-</tr>
+  <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
 
-<tr>
-  <td>- </td>
-  <td> - </td>
-</tr>
+  <p class="ex1">
+    <pre id="AnalysisCount">
+      The analysis and discussion will be written in here once drafted and adhering to the word count
+    </pre>
+  </p>
 
-<tr>
-  <td> -</td>
-  <td> -</td>
-</tr>
 
-</table>
+ 
+  <h3 id="References">References</h3>
 
-<h3 id= "References ">References </h3>
-<p class="ex1">
-  <pre>
-    All harvard references here 
-  </pre>
-</p>
+  <p class="ex1">
+    <pre>
+      All havard standard reference will be placed in the correct order here
+    </pre>
+  </p>
 
-</hr>
+  </hr>
+
+    <!Adding Last Update>
+
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Adding last update ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
     <!-- Last commit time display -->
 <div id="last-updated">Loading last update time...</div>
 <!-- Verify Button -->
-<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 5px 12px;">
+<button onclick="verifyLastUpdatedTime()" style="display: block; margin: 10px auto; padding: 8px 16px;">
     Verify Last Modified Time
 </button>
-
-
 <script>
     async function getLastUpdatedTime() {
-        const username = "FEPSFY6912874";
-        const repo = "FY6912874";
+        const username = 'FEPSFY6877148';
+        const repo = 'FY6877148';
+       
         const url = `https://api.github.com/repos/${username}/${repo}/commits`;
-      
         try {
             const response = await fetch(url, {
                 method: 'GET',
@@ -144,13 +133,14 @@ body{
                     'Accept': 'application/vnd.github.v3+json',
                 }
             });
-          
             if (!response.ok) {
                 throw new Error(`Error fetching data: ${response.status} - ${response.statusText}`);
             }
             const commits = await response.json();
             if (commits && commits.length > 0) {
                 const lastCommitDate = new Date(commits[0].commit.committer.date);
+               
+                // Displaying the time on load
                 document.getElementById('last-updated').innerText = `Last Modified Time: ${lastCommitDate.toLocaleString()}`;
             } else {
                 document.getElementById('last-updated').innerText = 'No commits found in the repository.';
@@ -170,9 +160,7 @@ body{
     window.onload = getLastUpdatedTime;
 </script>
 
-
-
-<!-- //////////////////////////////////////////////////////////////////////////////// -->
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
@@ -208,5 +196,4 @@ body{
   </body>
  
 </html>
-
-
+  
