@@ -34,12 +34,12 @@
   </head>
   
 </html>
-
-  <meta name = "viewport" content = "width=device-width , intial-scale=1">
-  <link rel="stylesheet" href = " https:www.w3schools.com/w3css/4/w3.css">
-  <style>
-    .mySlides {display:none;}
-  </style>
+</head>
+<meta name = "viewport" content = "width=device-width , intial-scale=1">
+<link rel="stylesheet" href = " https:www.w3schools.com/w3css/4/w3.css">
+<style>
+.mySlides {display:none;}
+</style>
 
   <style>
 body{
@@ -47,7 +47,7 @@ body{
   background-size : cover;
 } 
 
-<!table of contents>
+  <!table of contents>
 <table>
 <tr>
   <th><h3> Table Of Contence </h3></th>
@@ -67,9 +67,7 @@ body{
 </table>
 
 <hr>
-</p>
-  <h3 id="Abstract">Abstract</h3>
-
+<h3 id="Abstract">Abstract</h3>
   <p class="ex1">
   <pre>
     Abstract goes here 
@@ -77,28 +75,20 @@ body{
 </p>
 
 <h3 id= "Introduction ">Introduction </h3>
-<p Class="ex1">
-<pre>
-  introduction 
-</pre>
-</p>
-
-    
-<h3 id="Intro">Abstract</h3>
-  <p Class="ex1">
-  <pre>
-    intro here
+<p class="ex1">
+  <pre id="IndroductionCount>
+    introduction goes here 
   </pre>
-
 </p>
-  <h3 id = "Analysis and discussion">Analysis and discussion</h3>
-  <style>
-      p.exl{
-      margin-left:250 px;
-    }
-    
-  </style>
 
+    
+
+<h3 id = "Analysis and discussion">Analysis and discussion</h3>
+<p class="ex1">
+  <pre id="AnalysisCount">
+    The analysis and discussion will be written in here once drafted and adhering to the word count
+  </pre>
+</p>    
 
 <pre>
   Table 1 : Table name here 
@@ -123,12 +113,11 @@ body{
 </table>
 
 <h3 id= "References ">References </h3>
-<p>
-<pre>
-  All harvard references here 
-</pre>
+<p class="ex1">
+  <pre>
+    All harvard references here 
+  </pre>
 </p>
-
 
 </hr>
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
@@ -180,7 +169,44 @@ body{
     // Initial load to display the time on page load
     window.onload = getLastUpdatedTime;
 </script>
+
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
+  <!-- ////////////////////////////// Word count function ////////////////////////////// -->
+  <!-- //////////////////////////////////////////////////////////////////////////////// -->
+<!-- Placeholder for total word count -->
+<p id="totalWordCount"></p>
+<hr>
+<script>
+  // Function to calculate and display word count for a specified section
+  function displayWordCount(sectionId, outputId) {
+    // Get the text content from the specified section
+    const text = document.getElementById(sectionId).textContent;
+    // Split text into words based on spaces and filter out any empty strings
+    const wordArray = text.trim().split(/\s+/);
+    // Count the words
+    const wordCount = wordArray.length;
+    // Return the word count for summing purposes
+    return wordCount;
+  }
+  // Function to calculate and display total word count from selected sections
+  function displayTotalWordCount() {
+    // Calculate word count for each section and accumulate the total
+    const IntroductionCount = displayWordCount("IntroductionCount");
+    const AnalysisCount = displayWordCount("AnalysisCount");
+    // Calculate the sum of all selected sections
+    const totalWordCount = IntroductionCount + AnalysisCount;
+    // Display the total word count
+    document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
+  }
+  // Run the function for specific sections and display total count when the page loads
+  window.onload = displayTotalWordCount;
     </script>
 
+
+  </body>
+ 
+</html>
 
 
