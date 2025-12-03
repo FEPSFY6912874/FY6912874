@@ -287,7 +287,9 @@ body{
   // Initial load to display the last updated time on page load
   window.onload = getLastUpdatedTime;
 </script>
- <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
+
+<!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
@@ -308,13 +310,15 @@ body{
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_Count");
-    const AnalysisCount = displayWordCount("Analysis_Count");
+    const IntroductionCount = displayWordCount("Introduction_InText");
+    const AnalysisCount = displayWordCount("Analysis_InText");
     // Calculate the sum of all selected sections
     const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
-  }
+
+
+
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
     </script>
@@ -323,4 +327,5 @@ body{
   </body>
  
 </html>
-  
+
+
