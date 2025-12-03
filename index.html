@@ -23,7 +23,33 @@
         tr:nth-child(even) {
           background-color :#ADD8E6;
         }
-      
+          table {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 30%;
+        }
+
+        td, th {
+            border: 1px solid #dddddd;
+            text-align: left;
+            padding: 8px;
+        }
+
+        tr:nth-child(even) {
+            background-color: #dddddd;
+        }
+
+        p.ex1 {
+            margin-left: 250px;
+        }
+        
+        }
+
+        #wordCount {
+            font-weight: bold;
+            margin:20px 0;
+            font-size: 18px;
+        }
       </style>
 
   <style>
@@ -73,11 +99,12 @@ body{
   <!-- ////////////////////////////// Abstract ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <hr>
-  <h3 id="Abstract">Abstract</h3>
 
-  <p class="ex1">
+    <!-- ABSTRACT -->
+    <h3 id="Abstract">Abstract</h3>
+    <p class="ex1">
+        <pre>
 
-    <pre id="Abstract">
         The Halo was created by the Fédération Internationale de l'Automobile (FIA) as a device that safety regulatory change in 2018 
         after years of fatal crashes. The Halo is manufactured from Ti-6Al-4V titanium alloy which is engineered to withstand loads of up to
         125kN while integrating into the car’s primary crash systems . Despite proven lifesaving performance in major incidents  including those 
@@ -98,11 +125,14 @@ body{
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Inroduction ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
-  
-  <h3 id="Introduction">Introduction</h3>
 
-  <p class="ex1">
-    <pre id="Introduction_Count">
+
+   
+<h3 id="Introduction">Introduction</h3>
+<p class="ex1">
+    <pre>
+     <pre id="Introduction_Count">
+         
         There is a moment in the cockpit when travelling at speeds over 200 mph, (miles per hour) where the barrier between survival 
         and tragedy is reduced to a millisecond. The halo is a t-shaped multi-joint titanium round beam which is located above the driver's 
         head which has been engineered to protect against the flying debris, collisions with drivers and stationary objects 
@@ -120,11 +150,12 @@ body{
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Analysis and Discussion ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
+
   
   <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
 
   <p class="ex1">
-    <pre id="Analysis_Count">
+    <pre id="Design_Count  ">
       DESIGN AND ENGINEERING OF THE HALO
         
         The halo was developed by the FIA as a safety measure to protect the drivers from head injuries against collisions with other drivers and other
@@ -141,6 +172,10 @@ body{
         Airflow disruption was around the air intake and the rear wing being compromised, the rear wing can reduce the downforce and reduces 
         the engines efficiency and effectiveness (<a href ="Anima"> Anima 2019</a>, <a href ="#lin2020" >Lin and Papadopoulos, 2020</a>).
 
+        </pre>  
+        
+  <p class="ex1">
+    <pre id="Impact_Count  ">
      IMPACT PROTECTION AND SAFTEY REAL SITUATIONS 
         
         The Halo’s Protective ability has been demonstrated repeatedly in real-world Formula one since its introduction in 2018. During the Belgian 
@@ -156,7 +191,9 @@ body{
         Romain Grosjean’s accident in the Bahrain 2020 Grand Prix was another example on how the Halo prevented a fatal incident. The car 
         collided at a speed of “140 miles per hour ” (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>) with a stationary barrier that split the
         car open as it passed through it and mainly due to the halo device that the driver survived (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).
-       
+    </pre>   
+  <p class="ex1">
+    <pre id="Material_Count  ">
 
       MATERIALS BREAKDOWN 
 
@@ -164,7 +201,10 @@ body{
         which was chosen for is strength and stiffness and resistance to impact or corrosion. The titanium can withstand a static load 
         of 125kN(<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).  Finite-element studies show that under impact, 
         Ti-6Al-4V deforms elastically and plastically to dissipate energy while preventing fracture or intrusion into the cockpit (a href = "#R2022"> Raikar, 2022</a>).
-
+        </pre>  
+        
+  <p class="ex1">
+    <pre id="Visibilty_Count  ">
       VISIBILITY AND PERFORMANCE CONSIDERATION
         
         Visibility through the halo device has been a crucial concern since it has been implicated in formula one particularly
@@ -184,7 +224,11 @@ body{
         visibility remains clear” (<a href = "#SD22">Srinivasan, Demirel 2022</a>). Although the study did not measure the on-track lap effects it 
         was concluded that the interference that the halo produced was limited and quantifiable and while it slightly reduces visibility the 
         ergonomically affect on the driver's awareness is minimal compared to it proven safety benefits. 
- 
+
+    </pre>  
+        
+  <p class="ex1">
+    <pre id="Conclusion_Count  ">
 
     CONCLUSION 
         
@@ -195,7 +239,7 @@ body{
         and does not significantly impair driver awareness (Srinivasan, Demirel 2022). Overall, the Halo’s life preserving ability far outweighs
         its drawbacks, establishing it as an essential and permanent element of modern motorsport safety engineering.
  
-      
+    </pre>
      
 <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// References ////////////////////////////// -->
@@ -350,9 +394,13 @@ body{
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_Count");
-    const AnalysisCount = displayWordCount("Analysis_Count");
+    const DesignCount = displayWordCount("Design_Count");
+    const ImpactCount = displayWordCount("Impact_Count");
+    const MaterialCount = displayWordCount("Material_Count");
+    const VisibiltyCount = displayWordCount("Visability_Count");
+    const ConclusionCount = displayWordCount("Conclusion_Count");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + DesignCount + ImpactCount + MaterialCount + VisibiltyCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
