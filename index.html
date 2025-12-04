@@ -145,6 +145,12 @@ body{
 
   <p class="ex1">
     <pre id="Analysis_Count">
+
+        test
+
+<h3 id="Design">Design</h3>
+<p class="ex1">
+     <pre id="Design_Count">
   
         DESIGN AND ENGINEERING OF THE HALO
         
@@ -161,7 +167,10 @@ body{
         car designs there were critical challenges. One challenge was due to the aerodynamics being compromised, as airflow was disturbed.
         Airflow disruption was around the air intake and the rear wing being compromised, the rear wing can reduce the downforce and reduces 
         the engines efficiency and effectiveness (<a href ="Anima"> Anima 2019</a>, <a href ="#lin2020" >Lin and Papadopoulos, 2020</a>).
-
+         
+<h3 id="Impact">Impact</h3>
+<p class="ex1">
+     <pre id="Impact_Count">
         IMPACT PROTECTION AND SAFTEY REAL SITUATIONS 
         
         The Halo’s Protective ability has been demonstrated repeatedly in real-world Formula one since its introduction in 2018. During the Belgian 
@@ -178,6 +187,10 @@ body{
         collided at a speed of “140 miles per hour ” (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>) with a stationary barrier that split the
         car open as it passed through it and mainly due to the halo device that the driver survived (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).
 
+<h3 id=" Material">Material</h3>
+<p class="ex1">
+     <pre id="Material_Count">        
+         
         MATERIALS BREAKDOWN 
 
         The halo is manufactured from Ti-6A1-4V (grade 5) titanium alloy (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a> )
@@ -185,7 +198,11 @@ body{
         of 125kN(<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).  Finite-element studies show that under impact, 
         Ti-6Al-4V deforms elastically and plastically to dissipate energy while preventing fracture or intrusion into the cockpit (a href = "#R2022"> Raikar, 2022</a>).
         </pre>  
-
+         
+<h3 id="Visability">Visability</h3>
+<p class="ex1">
+     <pre id="visability_Count">  
+         
 
     
         VISIBILITY AND PERFORMANCE CONSIDERATION
@@ -211,6 +228,10 @@ body{
         was concluded that the interference that the halo produced was limited and quantifiable and while it slightly reduces visibility the 
         ergonomically affect on the driver's awareness is minimal compared to it proven safety benefits. 
 
+<h3 id="Conclusion">Conclusion</h3>
+<p class="ex1">
+     <pre id="Conclusion_Count">  
+         
         CONCLUSION 
         
         The Halo has transformed Formula One safety by providing proven head protection in major accidents , including those involving Leclerc, 
@@ -374,8 +395,13 @@ body{
     // Calculate word count for each section and accumulate the total
     const IntroductionCount = displayWordCount("Introduction_Count");
     const AnalysisCount = displayWordCount("Analysis_Count");
+    const DesignCount = displayWordCount("Design_Count");
+    const ImpactCount = displayWordCount("Impact_Count"); 
+    const MaterialCount = displayWordCount("Material_Count");  
+    const VisabilityCount = displayWordCount("Visability_Count");  
+    const ConclusionCount = displayWordCount("Conclusion_Count");   
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + AnalysisCount;
+    const totalWordCount = IntroductionCount + AnalysisCount + DesignCount + ImpactCount +MaterialCount + VisabilityCount + ConclusionCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
