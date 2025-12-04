@@ -121,7 +121,7 @@ body{
    
 <h3 id="Introduction">Introduction</h3>
 <p class="ex1">
-     <pre id="Introduction_InText">
+     <pre id="Introduction_Count">
          
         There is a moment in the cockpit when travelling at speeds over 200 mph, (miles per hour) where the barrier between survival 
         and tragedy is reduced to a millisecond. The halo is a t-shaped multi-joint titanium round beam which is located above the driver's 
@@ -144,8 +144,9 @@ body{
   <h3 id="Analysis and Discussion">Analysis and Discussion</h3>
 
   <p class="ex1">
-    <pre id="Design_InText">
-      DESIGN AND ENGINEERING OF THE HALO
+    <pre id="Analysis_Count">
+  
+        DESIGN AND ENGINEERING OF THE HALO
         
         The halo was developed by the FIA as a safety measure to protect the drivers from head injuries against collisions with other drivers and other
         debris. The Halo consists of a T-shape multi-jointed beam capable of withstanding forces up to 125kN. 
@@ -160,8 +161,7 @@ body{
         car designs there were critical challenges. One challenge was due to the aerodynamics being compromised, as airflow was disturbed.
         Airflow disruption was around the air intake and the rear wing being compromised, the rear wing can reduce the downforce and reduces 
         the engines efficiency and effectiveness (<a href ="Anima"> Anima 2019</a>, <a href ="#lin2020" >Lin and Papadopoulos, 2020</a>).
-  <p class="ex1">
-    <pre id="Impact_InText">
+
      IMPACT PROTECTION AND SAFTEY REAL SITUATIONS 
         
         The Halo’s Protective ability has been demonstrated repeatedly in real-world Formula one since its introduction in 2018. During the Belgian 
@@ -177,8 +177,6 @@ body{
         Romain Grosjean’s accident in the Bahrain 2020 Grand Prix was another example on how the Halo prevented a fatal incident. The car 
         collided at a speed of “140 miles per hour ” (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>) with a stationary barrier that split the
         car open as it passed through it and mainly due to the halo device that the driver survived (<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).
-  <p class="ex1">
-    <pre id="Material_InText">
 
       MATERIALS BREAKDOWN 
 
@@ -187,9 +185,6 @@ body{
         of 125kN(<a href = "#Cheru2024">Cherukara and Yeddu, 2024 </a>).  Finite-element studies show that under impact, 
         Ti-6Al-4V deforms elastically and plastically to dissipate energy while preventing fracture or intrusion into the cockpit (a href = "#R2022"> Raikar, 2022</a>).
         </pre>  
-        
-  <p class="ex1">
-    <pre id="Visibilty_InText">
       VISIBILITY AND PERFORMANCE CONSIDERATION
         
         Visibility through the halo device has been a crucial concern since it has been implicated in formula one particularly
@@ -209,8 +204,6 @@ body{
         visibility remains clear” (<a href = "#SD22">Srinivasan, Demirel 2022</a>). Although the study did not measure the on-track lap effects it 
         was concluded that the interference that the halo produced was limited and quantifiable and while it slightly reduces visibility the 
         ergonomically affect on the driver's awareness is minimal compared to it proven safety benefits. 
-  <p class="ex1">
-    <pre id="Conclusion_InText  ">
 
     CONCLUSION 
         
@@ -351,7 +344,7 @@ body{
 </script>
 
 
-    <!-- //////////////////////////////////////////////////////////////////////////////// -->
+ <!-- //////////////////////////////////////////////////////////////////////////////// -->
   <!-- ////////////////////////////// Word count function ////////////////////////////// -->
   <!-- //////////////////////////////////////////////////////////////////////////////// -->
 <!-- Placeholder for total word count -->
@@ -372,23 +365,19 @@ body{
   // Function to calculate and display total word count from selected sections
   function displayTotalWordCount() {
     // Calculate word count for each section and accumulate the total
-    const IntroductionCount = displayWordCount("Introduction_InText");
-    const DesignCount = displayWordCount("Design__InText");
-    const ImpactCount = displayWordCount("Impact__InText");
-    const MaterialCount = displayWordCount("Material__InText");
-    const VisibiltyCount = displayWordCount("Visibilty__InText");
-    const ConclusionCount = displayWordCount("Conclusion__InText");
+    const IntroductionCount = displayWordCount("Introduction_Count");
+    const AnalysisCount = displayWordCount("Analysis_Count");
     // Calculate the sum of all selected sections
-    const totalWordCount = IntroductionCount + DesignCount + ImpactCount + MaterialCount + VisibiltyCount + ConclusionCount;;
+    const totalWordCount = IntroductionCount + AnalysisCount;
     // Display the total word count
     document.getElementById("totalWordCount").innerText = `Total word count: ${totalWordCount}`;
   }
   // Run the function for specific sections and display total count when the page loads
   window.onload = displayTotalWordCount;
-</script>
+    </script>
+
 
   </body>
  
 </html>
-
-
+  
